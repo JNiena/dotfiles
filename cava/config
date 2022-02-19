@@ -1,0 +1,17 @@
+[general]
+framerate = 144
+bar_width = 3
+bar_spacing = 1
+
+[color]
+gradient = 1
+gradient_count = 4
+gradient_color_2 = '#a3be8c'
+gradient_color_3 = '#81a1c1'
+gradient_color_4 = '#5e81ac'
+gradient_color_1 = '#bf616a'
+
+[smoothing]
+integral = 90
+gravity = 60
+monstercat = 1

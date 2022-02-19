@@ -1,0 +1,53 @@
+# Terminal emulator
+super + Return
+	alacritty
+
+# Program launcher
+super + @space
+	rofi -show run
+
+# Reload sxhkd
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# Quit or restart bspwm
+super + alt + {q,r}
+	bspc {quit,wm -r}
+
+# Close and kill
+super + {_,shift + }x
+	bspc node -{c,k}
+
+# Alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
+# Swap the current node and the biggest window
+super + g
+	bspc node -s biggest.window
+
+# Set the window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# Set the node flags
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+# Focus the node in the given direction
+super + {Left,Down,Up,Right}
+	bspc node -f {west,south,north,east}
+
+# Swap the node in the given direction
+super + shift + {Left,Down,Up,Right}
+        dir={west,south,north,east}; \
+        bspc node -s "$dir.local" --follow \
+            || bspc node -m "$dir" --follow
+
+# Mute and unmute volume
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Raise and lower volume
+XF86Audio{Raise,Lower}Volume
+	pactl set-sink-mute @DEFAULT_SINK@ false && pactl set-sink-volume @DEFAULT_SINK@ {+,-}5%

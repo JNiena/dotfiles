@@ -1,0 +1,23 @@
+**Packages:**
+- xf86-video-amdgpu
+- git
+- base-devel
+- yay
+- xorg-server
+- xorg-xinit
+- xorg-xsetroot
+- xorg-xrandr
+- bottom
+- cava
+- polybar
+- bspwm
+- sxhkd
+- alacritty
+- neovim
+- picom
+- firefox
+- nitrogen
+- polybar
+- ranger
+- rofi
+- nerd-fonts-complete
