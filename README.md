@@ -7,8 +7,13 @@
 - xorg-xinit
 - xorg-xsetroot
 - xorg-xrandr
+- zip
+- unzip
+- wget
+- pulseaudio
 - bottom
 - cava
+- neofetch
 - polybar
 - bspwm
 - sxhkd
