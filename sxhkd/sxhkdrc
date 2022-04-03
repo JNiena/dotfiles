@@ -4,7 +4,7 @@ super + Return
 
 # Program launcher
 super + @space
-	rofi -show run
+	rofi -show-icons -show run
 
 # Reload sxhkd
 super + Escape
