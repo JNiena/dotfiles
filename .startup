@@ -1,32 +1,23 @@
 #!/bin/sh
 
-# Kill running programs
-pkill polybar
-pkill nitrogen
-pkill picom
-pkill bspwm
-
-# Set primary monitor, refresh rates, and resolutions
+# Set refresh rates and resolutions.
 xrandr --output DisplayPort-0 --mode 2560x1440 --rate 143.86 --primary &
 xrandr --output HDMI-A-0 --mode 2560x1440 --rate 144 &
 
-# Wait for monitors to be ready
+# Wait for the monitors to be ready.
 sleep 5
 
-# Set keyboard map
-setxkbmap us &
+# Start the status bar.
+polybar main &
 
-# Start polybar
-polybar --reload main &
+# Set the wallpaper.
+feh --bg-scale ~/Pictures/Wallpapers/wallpaper.png &
 
-# Start nitrogen
-nitrogen --restore &
-
-# Set cursor
+# Set the cursor.
 xsetroot -cursor_name left_ptr &
 
-# Start picom
-picom -f &
+# Start the compositor.
+picom &
 
-# Start bspwm
+# Start the tiling manager.
 exec bspwm
