@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Set refresh rates and resolutions.
+# Set the refresh rates and resolutions.
 xrandr --output DisplayPort-0 --mode 2560x1440 --rate 143.86 --primary &
 xrandr --output HDMI-A-0 --mode 2560x1440 --rate 144 &
 
