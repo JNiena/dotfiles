@@ -17,7 +17,7 @@ feh --bg-scale ~/pictures/wallpapers/wallpaper.png &
 xsetroot -cursor_name left_ptr &
 
 # Start the compositor.
-picom --config ~/.config/picom/picom.conf
+picom --config ~/.config/picom/picom.conf &
 
 # Start the tiling manager.
 exec bspwm
