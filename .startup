@@ -11,13 +11,13 @@ sleep 5
 polybar main &
 
 # Set the wallpaper.
-feh --bg-scale ~/Pictures/Wallpapers/wallpaper.png &
+feh --bg-scale ~/pictures/wallpapers/wallpaper.png &
 
 # Set the cursor.
 xsetroot -cursor_name left_ptr &
 
 # Start the compositor.
-picom &
+picom --config ~/.config/picom/picom.conf
 
 # Start the tiling manager.
 exec bspwm
