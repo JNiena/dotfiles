@@ -26,10 +26,9 @@ end
 
 return packer.startup(function(use)
   use "wbthomason/packer.nvim"
-  use "shaunsingh/nord.nvim"
-  use "nvim-treesitter/nvim-treesitter"
+  use "folke/tokyonight.nvim"
   use "windwp/nvim-autopairs"
-  use "kyazdani42/nvim-tree.lua"
+  use "nvim-treesitter/nvim-treesitter"
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
