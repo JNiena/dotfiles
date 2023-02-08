@@ -1,14 +1,14 @@
 [colors]
 alpha = #00000000
-dark-gray = #4C566A
-light-gray = #E5E9F0
-red = #BF616A
-green = #A3BE8C
-yellow = #EBCB8B
-blue = #81a1c1
-cyan = #88c0d0
-background = #2E3440
-foreground = #D8DEE9
+dark-gray = #24283b
+light-gray = #a9b1d6
+red = #ff7a93
+green = #b9f27c
+yellow = #ff9e64
+blue = #7da6ff
+cyan = #0db9d7
+background = #1a1b26
+foreground = #a9b1d6
 background-alt = ${colors.dark-gray}
 foreground-alt = ${colors.light-gray}
 primary = ${colors.blue}
