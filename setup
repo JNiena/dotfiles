@@ -31,7 +31,7 @@ yay -Syu alacritty
 yay -Syu feh rofi polybar
 
 # Setup fonts.
-yay -Syu nerd-fonts-jetbrains-mono
+yay -Syu ttf-jetbrains-mono-nerd
 
 # Setup the web browser.
 yay -Syu firefox
