@@ -11,7 +11,7 @@ sleep 5
 polybar main &
 
 # Set the wallpaper.
-feh --bg-scale ~/pictures/wallpapers/wallpaper.png &
+feh --bg-scale ~/pictures/wallpapers/wallpaper.jpg &
 
 # Set the cursor.
 xsetroot -cursor_name left_ptr &
