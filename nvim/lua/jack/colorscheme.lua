@@ -1,4 +1,4 @@
-local colorscheme = "nord"
+local colorscheme = "tokyonight-night"
 
 vim.g.nord_italic = false
 
