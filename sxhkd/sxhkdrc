@@ -4,7 +4,7 @@ super + Return
 
 # Open the application launcher.
 super + @space
-	rofi -show-icons -show run
+	rofi -show-icons -show drun
 
 # Reload the hotkey daemon.
 super + Escape
