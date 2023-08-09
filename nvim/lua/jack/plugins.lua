@@ -1,4 +1,5 @@
 local install_path = vim.fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
+
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   PACKER_BOOTSTRAP = vim.fn.system {
     "git",
@@ -19,6 +20,7 @@ vim.cmd [[
 ]]
 
 local status, packer = pcall(require, "packer")
+
 if not status then
   vim.notify("Failed to load packer.")
   return
@@ -26,7 +28,7 @@ end
 
 return packer.startup(function(use)
   use "wbthomason/packer.nvim"
-  use "folke/tokyonight.nvim"
+  use { "catppuccin/nvim", as = "catppuccin" }
   use "windwp/nvim-autopairs"
   use "nvim-treesitter/nvim-treesitter"
 

@@ -44,6 +44,10 @@ super + shift + {Left,Down,Up,Right}
         bspc node -s "$dir.local" --follow \
             || bspc node -m "$dir" --follow
 
+# Use transformers_ocr
+super + r
+  transformers_ocr recognize
+
 # Mute and unmute the audio.
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
