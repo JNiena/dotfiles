@@ -18,10 +18,6 @@ super + alt + {q,r}
 super + {_,shift + }x
 	bspc node -{c,k}
 
-# Alternate between the tiled and monocle layout.
-super + m
-	bspc desktop -l next
-
 # Swap the current node and the biggest window.
 super + g
 	bspc node -s biggest.window
