@@ -23,8 +23,8 @@ super + g
 	bspc node -s biggest.window
 
 # Set the window state.
-super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+super + {t,f}
+	bspc node -t {tiled,fullscreen}
 
 # Set the node flags.
 super + ctrl + {m,x,y,z}
@@ -32,7 +32,7 @@ super + ctrl + {m,x,y,z}
 
 # Focus the node in the given direction.
 super + {Left,Down,Up,Right}
-	bspc node -f {west,south,north,east}
+  bspc node -f {west,south,north,east}
 
 # Swap the node in the given direction.
 super + shift + {Left,Down,Up,Right}
@@ -40,14 +40,18 @@ super + shift + {Left,Down,Up,Right}
         bspc node -s "$dir.local" --follow \
             || bspc node -m "$dir" --follow
 
-# Use transformers_ocr
-super + r
-  transformers_ocr recognize
+# Take a screenshot
+super + s
+  maim -s "/home/jack/pictures/screenshots/$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 8).png"
 
 # Mute and unmute the audio.
-XF86AudioMute
+super + Home
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
 
-# Raise and lower the volume.
-XF86Audio{Raise,Lower}Volume
-	pactl set-sink-mute @DEFAULT_SINK@ false && pactl set-sink-volume @DEFAULT_SINK@ {+,-}5%
+# Raise the volume.
+super + Prior
+ pactl set-sink-mute @DEFAULT_SINK@ false && pactl set-sink-volume @DEFAULT_SINK@ +5% 
+
+# Lower the volume.
+super + Next
+  pactl set-sink-mute @DEFAULT_SINK@ false && pactl set-sink-volume @DEFAULT_SINK@ -5%
