@@ -44,14 +44,9 @@ super + shift + {Left,Down,Up,Right}
 super + s
   maim -s "/home/jack/pictures/screenshots/$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 8).png"
 
-# Mute and unmute the audio.
-super + Home
+XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
 
-# Raise the volume.
-super + Prior
- pactl set-sink-mute @DEFAULT_SINK@ false && pactl set-sink-volume @DEFAULT_SINK@ +5% 
-
-# Lower the volume.
-super + Next
-  pactl set-sink-mute @DEFAULT_SINK@ false && pactl set-sink-volume @DEFAULT_SINK@ -5%
+# Raise and lower the volume.
+XF86Audio{Raise,Lower}Volume
+	pactl set-sink-mute @DEFAULT_SINK@ false && pactl set-sink-volume @DEFAULT_SINK@ {+,-}5%
