@@ -26,24 +26,29 @@ super + g
 super + {t,f}
 	bspc node -t {tiled,fullscreen}
 
-# Set the node flags.
-super + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
-
 # Focus the node in the given direction.
-super + {Left,Down,Up,Right}
+super + {h,j,k,l}
   bspc node -f {west,south,north,east}
 
 # Swap the node in the given direction.
-super + shift + {Left,Down,Up,Right}
+super + shift + {h,j,k,l}
         dir={west,south,north,east}; \
         bspc node -s "$dir.local" --follow \
             || bspc node -m "$dir" --follow
 
-# Take a screenshot
+# Focus on the given workspace.
+super + ctrl + {h,j,k,l}
+	bspc desktop -f {0,1,2,3}
+
+# Take a screenshot with the selection tool.
 super + s
   maim -s "/home/jack/pictures/screenshots/$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 8).png"
 
+# Take a screenshot of the active window.
+super + shift + s
+  maim -i $(xdotool getactivewindow) "/home/jack/pictures/screenshots/$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 8).png"
+
+# Mute and unmute the volume.
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
 
