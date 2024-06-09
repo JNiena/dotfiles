@@ -42,11 +42,11 @@ super + ctrl + {h,j,k,l}
 
 # Take a screenshot with the selection tool.
 super + s
-  maim -s "/home/jack/pictures/screenshots/$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 8).png"
+  maim -s "/home/jack/pictures/screenshots/$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 8).png" --hidecursor
 
 # Take a screenshot of the active window.
 super + shift + s
-  maim -i $(xdotool getactivewindow) "/home/jack/pictures/screenshots/$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 8).png"
+  maim -i $(xdotool getactivewindow) "/home/jack/pictures/screenshots/$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 8).png" --hidecursor
 
 # Mute and unmute the volume.
 XF86AudioMute
