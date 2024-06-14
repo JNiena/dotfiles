@@ -1,0 +1,57 @@
+# Set the modifier
+set $mod Mod4
+
+# Set the direction keys
+set $left h
+set $down j
+set $up k
+set $right l
+
+# Set the terminal
+set $term alacritty
+
+# Set the menu
+set $menu dmenu_path | wmenu | xargs swaymsg exec --
+
+# Launch the terminal
+bindsym $mod+Return exec $term
+
+# Launch the menu
+bindsym $mod+space exec $menu
+
+# Reload the configuration
+bindsym $mod+Escape reload
+
+# Kill the focused window
+bindsym $mod+x kill
+
+# Toggle fullscreen
+bindsym $mod+f fullscreen
+
+# Toggle mute the volume
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Raise the volume
+bindsym XF86AudioRaiseVolume exec pactl set-sink-mute @DEFAULT_SINK@ false && pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+# Lower the volume
+bindsym XF86AudioLowerVolume exec pactl set-sink-mute @DEFAULT_SINK@ false && pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+# Take a screenshot
+bindsym $mod+s exec slurp | grim -g - "/home/jack/pictures/screenshots/$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 8).png"
+
+# Shift the focus
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+# Shift the container
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+# Shift the workspace
+bindsym $mod+Ctrl+$left workspace prev
+bindsym $mod+Ctrl+$right workspace next

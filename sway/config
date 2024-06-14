@@ -1,0 +1,4 @@
+include ~/.config/sway/keybinds
+include ~/.config/sway/display
+include ~/.config/sway/behavior
+include /etc/sway/config.d/*

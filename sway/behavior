@@ -1,0 +1,32 @@
+# Turn off dragging
+tiling_drag off
+
+# Turn off mouse focusing
+focus_follows_mouse no
+
+# Turn of mouse warping
+mouse_warping none
+
+# Set workspaces
+workspace 1 output DP-1
+workspace 2 output DP-1
+workspace 3 output DP-1
+workspace 4 output DP-1
+
+# Configure idle and lock behavior
+exec swayidle -w \
+timeout 300 'swaylock -f -c 000000' \
+timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+before-sleep 'swaylock -f -c 000000'
+
+# Configure the clipboard
+exec wl-paste -t text --watch clipman store --no-persist
+
+# Configure the IME
+exec export GTK_IM_MODULE=fcitx
+exec export QT_IM_MODULE=fcitx
+exec export SDL_IM_MODULE=fcitx
+exec export GLFW_IM_MODULE=ibus
+exec export XMODIFIERS=@im=fcitx
+
+exec fcitx5 -d
