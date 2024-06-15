@@ -1,0 +1,36 @@
+#!/bin/sh
+
+# Set the refresh rates and resolutions.
+xrandr --output DisplayPort-0 --mode 2560x1440 --rate 143.86 --primary &
+xrandr --output HDMI-A-0 --mode 2560x1440 --rate 144 &
+
+# Wait for the monitors to be ready.
+# sleep 5
+
+# Start the status bar.
+polybar -r main &
+
+# Set the wallpaper.
+feh --bg-scale ~/pictures/山.jpg &
+
+# Set the cursor.
+xsetroot -cursor_name left_ptr &
+
+# Start the compositor.
+picom --config ~/.config/picom/picom.conf &
+
+# Setup input method modules.
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export SDL_IM_MODULE=fcitx
+export GLFW_IM_MODULE=ibus
+export XMODIFIERS=@im=fcitx
+
+# Start FCITX5
+fcitx5 -d &
+
+# Setup QT5
+export QT_QPA_PLATFORMTHEME=gt5ct
+
+# Start the tiling manager.
+exec bspwm
