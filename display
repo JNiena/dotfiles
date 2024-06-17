@@ -15,7 +15,7 @@ riverctl border-width "2"
 
 # Set the background
 swww-daemon &
-swww img ~/pictures/山.jpg
+swww img "/home/jack/pictures/山.jpg"
 
 # Set the GTK settings
 gsettings set org.gnome.desktop.interface gtk-theme "catppuccin-mocha-blue-standard+default"
