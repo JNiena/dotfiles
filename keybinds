@@ -24,6 +24,10 @@ riverctl map normal Super+Shift+Control J set-view-tags "$((1 << 1))"
 riverctl map normal Super+Shift+Control K set-view-tags "$((1 << 2))"
 riverctl map normal Super+Shift+Control L set-view-tags "$((1 << 3))"
 
+# Shift the window to another output
+riverctl map normal Super+Alt H send-to-output -current-tags left
+riverctl map normal Super+Alt L send-to-output -current-tags right
+
 # Close the window
 riverctl map normal Super X close
 
