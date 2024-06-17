@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# Set the output modes
+wlr-randr --output "DP-1" --mode "2560x1440@143.856003"
+wlr-randr --output "HDMI-A-1" --mode "2560x1440@143.998993"
+
+# Set the layout generator
+riverctl default-layout "bsp-layout"
+river-bsp-layout --inner-gap "5" --outer-gap "10" &
+
+# Set the border
+riverctl border-color-focused "0x89b4fa"
+riverctl border-color-unfocused "0x1e1e2e"
+riverctl border-width "2"
+
+# Set the background
+swww-daemon &
+swww img ~/pictures/山.jpg
+
+# Set the GTK settings
+gsettings set org.gnome.desktop.interface gtk-theme "catppuccin-mocha-blue-standard+default"
+gsettings set org.gnome.desktop.interface icon-theme "Papirus"
+gsettings set org.gnome.desktop.interface font-name "Iosevka NF"
+gsettings set org.gnome.desktop.wm.preferences button-layout ""

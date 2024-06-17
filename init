@@ -1,0 +1,5 @@
+#!/bin/sh
+
+source /home/jack/.config/river/display
+source /home/jack/.config/river/keybinds
+source /home/jack/.config/river/behavior
