@@ -22,3 +22,6 @@ gsettings set org.gnome.desktop.interface gtk-theme "catppuccin-mocha-blue-stand
 gsettings set org.gnome.desktop.interface icon-theme "Papirus"
 gsettings set org.gnome.desktop.interface font-name "Iosevka NF"
 gsettings set org.gnome.desktop.wm.preferences button-layout ""
+
+# Use server side decorations
+riverctl rule-add -app-id '*' ssd
