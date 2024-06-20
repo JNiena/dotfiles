@@ -45,7 +45,7 @@ riverctl map normal None XF86AudioLowerVolume spawn "pactl set-sink-volume '@DEF
 riverctl map normal None XF86AudioMute spawn "pactl set-sink-mute '@DEFAULT_SINK@' toggle"
 
 # Take a screenshot
-riverctl map normal Super S spawn "slurp | grim -g - '/home/jack/pictures/screenshots/$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 8).png'"
+riverctl map normal Super S spawn "slurp | grim -g - /home/jack/pictures/screenshots/$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 8).png"
 
 # Launch apps
 riverctl map normal Super Return spawn "alacritty"
