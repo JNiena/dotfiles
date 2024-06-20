@@ -1,57 +1,36 @@
-# Launch the terminal.
 super + Return
 	alacritty
 
-# Open the application launcher.
-super + @space
+super + space
 	rofi -show-icons -show drun
 
-# Reload the hotkey daemon.
 super + Escape
 	pkill -USR1 -x sxhkd
 
-# Quit or restart the tiling manager.
-super + alt + {q,r}
-	bspc {quit,wm -r}
-
-# Close and kill the opened window.
 super + {_,shift + }x
 	bspc node -{c,k}
 
-# Swap the current node and the biggest window.
 super + g
 	bspc node -s biggest.window
 
-# Set the window state.
 super + {t,f}
 	bspc node -t {tiled,fullscreen}
 
-# Focus the node in the given direction.
 super + {h,j,k,l}
   bspc node -f {west,south,north,east}
 
-# Swap the node in the given direction.
 super + shift + {h,j,k,l}
-        dir={west,south,north,east}; \
-        bspc node -s "$dir.local" --follow \
-            || bspc node -m "$dir" --follow
+	dir={west,south,north,east}; \
+	bspc node -s "$dir.local" --follow || bspc node -m "$dir" --follow
 
-# Focus on the given workspace.
 super + ctrl + {h,j,k,l}
-	bspc desktop -f {0,1,2,3}
+	bspc desktop -f {1,2,3,4}
 
-# Take a screenshot with the selection tool.
 super + s
   maim -s "/home/jack/pictures/screenshots/$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 8).png" --hidecursor
 
-# Take a screenshot of the active window.
-super + shift + s
-  maim -i $(xdotool getactivewindow) "/home/jack/pictures/screenshots/$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 8).png" --hidecursor
-
-# Mute and unmute the volume.
 XF86AudioMute
-	pactl set-sink-mute @DEFAULT_SINK@ toggle
+	pactl set-sink-mute "@DEFAULT_SINK@" toggle
 
-# Raise and lower the volume.
 XF86Audio{Raise,Lower}Volume
-	pactl set-sink-mute @DEFAULT_SINK@ false && pactl set-sink-volume @DEFAULT_SINK@ {+,-}5%
+	pactl set-sink-mute "@DEFAULT_SINK@" false && pactl set-sink-volume @DEFAULT_SINK@ {+,-}5%
