@@ -5,12 +5,12 @@ dim_foreground = "#CDD6F4"
 bright_foreground = "#CDD6F4"
 
 [colors.cursor]
-text = "#F5E0DC"
-cursor = "#94E2D5"
+text = "#1E1E2E"
+cursor = "#89B4FA"
 
 [colors.vi_mode_cursor]
-text = "#F5E0DC"
-cursor = "#94E2D5"
+text = "#1E1E2E"
+cursor = "#89B4FA"
 
 [colors.search.matches]
 foreground = "#1E1E2E"
@@ -75,7 +75,7 @@ index = 17
 color = "#F5E0DC"
 
 [font]
-size = 13
+size = 14
 
 [font.bold]
 family = "Iosevka NF"
@@ -92,3 +92,6 @@ style = "Italic"
 [font.normal]
 family = "Iosevka NF"
 style = "Regular"
+
+[env]
+TERM = "xterm-256color"
