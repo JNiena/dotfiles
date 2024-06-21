@@ -19,12 +19,15 @@ super + {t,f}
 super + {h,j,k,l}
   bspc node -f {west,south,north,east}
 
+super + ctrl + {h,j,k,l}
+	bspc desktop -f {1,2,3,4}
+
 super + shift + {h,j,k,l}
 	dir={west,south,north,east}; \
 	bspc node -s "$dir.local" --follow || bspc node -m "$dir" --follow
 
-super + ctrl + {h,j,k,l}
-	bspc desktop -f {1,2,3,4}
+super + ctrl + shift + {h,j,k,l}
+	bspc node -d {1,2,3,4}
 
 super + s
   maim -s "/home/jack/pictures/screenshots/$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 8).png" --hidecursor
