@@ -3,14 +3,14 @@
 xrandr --output "DisplayPort-0" --mode "2560x1440" --rate "144" --primary
 xrandr --output "HDMI-A-0" --mode "2560x1440" --rate "144"
 
-picom &
-
-bspwm &
-
-sxhkd &
-
-fcitx5 &
-
 xsetroot -cursor_name left_ptr
 
 feh --bg-scale ~/pictures/山.jpg
+
+fcitx5 &
+
+picom &
+
+sxhkd &
+
+exec bspwm
