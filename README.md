@@ -63,6 +63,8 @@ pipewire-pulse
 pipewire-jack
 pipewire-alsa
 
+easyeffects
+
 fcitx5
 fcitx5-qt
 fcitx5-gtk
