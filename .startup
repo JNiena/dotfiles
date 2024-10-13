@@ -9,7 +9,7 @@ feh --bg-scale ~/pictures/山.jpg
 
 fcitx5 &
 
-picom &
+picom --backend glx &
 
 sxhkd &
 
