@@ -19,6 +19,9 @@ super + {t,f}
 super + {h,j,k,l}
   bspc node -f {west,south,north,east}
 
+super + {q,e}
+  bspc node -f {west,east}
+
 super + ctrl + {h,j,k,l}
 	bspc desktop -f {1,2,3,4}
 
@@ -30,10 +33,10 @@ super + ctrl + shift + {h,j,k,l}
 	bspc node -d {1,2,3,4}
 
 super + s
-  maim -s /home/jack/pictures/screenshots/$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 8).png --hidecursor
+  maim -s /home/akiha/pictures/screenshots/$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 8).png --hidecursor
 
 super + shift + s
-  maim -i $(xdotool getactivewindow) /home/jack/pictures/screenshots/$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 8).png --hidecursor
+  maim -i $(xdotool getactivewindow) /home/akiha/pictures/screenshots/$(cat /dev/urandom | tr -cd 'a-f0-9' | head -c 8).png --hidecursor
 
 XF86AudioMute
 	pactl set-sink-mute "@DEFAULT_SINK@" toggle

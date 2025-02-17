@@ -16,10 +16,10 @@ xf86-video-amdgpu
 mesa
 vulkan-radeon
 
+7zip
 zip
 unzip
 unrar
-unarchiver
 
 picom
 bspwm
@@ -34,16 +34,13 @@ mpv
 maim
 feh
 
-yt-dlp
-yuzu-mainline-bin
-
-qemu-full
-dnsmasq
-iptables-nft
-
 firefox
 qbittorrent
-anki-bin
+wireguard-tools
+reflector
+
+bluez
+bluez-utils
 
 vscodium
 neovim
@@ -63,12 +60,11 @@ pipewire-pulse
 pipewire-jack
 pipewire-alsa
 
-easyeffects
-
 fcitx5
 fcitx5-qt
 fcitx5-gtk
 fcitx5-mozc-ut
+fcitx5-configtool
 
 ttf-iosevka-nerd
 noto-fonts
