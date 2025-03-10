@@ -8,7 +8,7 @@
 	fg-col2: #f5e0dc;
 	grey: #6c7086;
 	width: 600;
-	font: "Iosevka NF 16";
+	font: "Iosevka NF 18";
 }
 
 element-text, element-icon, mode-switcher {
